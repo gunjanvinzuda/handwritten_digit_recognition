@@ -62,7 +62,7 @@ class App(tk.Tk):
         HWND = self.canvas.winfo_id()  # get the handle of the canvas
         rect = win32gui.GetWindowRect(HWND)  # get the coordinate of the canvas
         a,b,c,d = rect
-        rect=(a,b,c,d)
+        rect=(a+3,b+3,c-3,d-3)
         im = ImageGrab.grab(rect)
 
         digit, acc = predict_digit(im)
