@@ -31,7 +31,7 @@ def predict_digit(img):
 		a = sigmoid(np.dot(w,a) + b)
 	#predicting the class
 	prediction = np.argmax(a)
-	prob = max(a);
+	prob = max(a)
 	return prediction, prob
 
 class App(tk.Tk):
